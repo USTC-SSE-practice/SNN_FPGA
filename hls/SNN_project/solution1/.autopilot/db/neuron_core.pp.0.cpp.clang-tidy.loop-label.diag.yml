@@ -1,0 +1,22 @@
+---
+MainSourceFile:  'C:/Users/ghada/Documents/SNN/hls/SNN_project/solution1/.autopilot/db/neuron_core.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_15_1:  '
+    FileOffset:      15
+    FilePath:        neuron_core.cpp
+    Replacements:    
+      - FilePath:        'C:\Users\ghada\Documents\SNN\hls\SNN_project\solution1\.autopilot\db\neuron_core.pp.0.cpp'
+        Offset:          193663
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_15_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_20_2:  '
+    FileOffset:      20
+    FilePath:        neuron_core.cpp
+    Replacements:    
+      - FilePath:        'C:\Users\ghada\Documents\SNN\hls\SNN_project\solution1\.autopilot\db\neuron_core.pp.0.cpp'
+        Offset:          193742
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_20_2: '
+...

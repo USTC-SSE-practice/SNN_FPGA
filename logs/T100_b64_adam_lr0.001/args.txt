@@ -1,0 +1,2 @@
+Namespace(T=100, device='cpu', b=64, epochs=1, j=4, data_dir='./data/mnist', out_dir='./logs', resume=None, amp=False, opt='adam', momentum=0.9, lr=0.001, tau=2.0)
+C:\Users\ghada\Documents\SNN\venv\lib\site-packages\spikingjelly\activation_based\examples\lif_fc_mnist.py -tau 2.0 -T 100 -device cpu -b 64 -epochs 1 -data-dir ./data/mnist -opt adam -lr 1e-3 -j 4

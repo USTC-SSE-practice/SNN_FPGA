@@ -1,0 +1,30 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/ghada/Documents/SNN/hls/SNN_project/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="snn_infer" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=snn_infer" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="neuron_core.cpp:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="snn_infer" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="neuron_core.cpp:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="snn_infer" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="neuron_core.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="snn_infer" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_ctrl_hs port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="neuron_core.cpp:12:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="snn_infer" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=model_weights complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="neuron_core.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="snn_infer" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="neuron_core.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="snn_infer" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="neuron_core.cpp:7:0" msg_body="Unrolling loop 'VITIS_LOOP_15_1' (neuron_core.cpp:15:19) in function 'snn_infer' completely with a factor of 10">
+        <args Factor="10" LoopLoc="neuron_core.cpp:15:19" LoopName="VITIS_LOOP_15_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./model_weights.h:4:0" msg_body="Applying array_partition to '_ZL13model_weights': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL13model_weights"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,10 @@
+C:\Users\ghada\Documents\SNN\hls\SNN_project\solution1\.autopilot\db\neuron_core.pp.0.cpp:3569:2: warning: Added loop label VITIS_LOOP_15_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 10; i++) {
+ ^~~
+ VITIS_LOOP_15_1: 
+C:\Users\ghada\Documents\SNN\hls\SNN_project\solution1\.autopilot\db\neuron_core.pp.0.cpp:3569:2: note: FIX-IT applied suggested code changes
+C:\Users\ghada\Documents\SNN\hls\SNN_project\solution1\.autopilot\db\neuron_core.pp.0.cpp:3574:9: warning: Added loop label VITIS_LOOP_20_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < 784; j++) {
+        ^~~
+        VITIS_LOOP_20_2: 
+C:\Users\ghada\Documents\SNN\hls\SNN_project\solution1\.autopilot\db\neuron_core.pp.0.cpp:3574:9: note: FIX-IT applied suggested code changes

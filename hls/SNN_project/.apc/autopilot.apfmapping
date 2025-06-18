@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="model_weights.h" path="C:\Users\ghada\Documents\SNN\hls\model_weights.h"/>
+    <originFiles name="neuron_core.cpp" path="C:\Users\ghada\Documents\SNN\hls\neuron_core.cpp"/>
+    <originFiles name="neuron_core.h" path="C:\Users\ghada\Documents\SNN\hls\neuron_core.h"/>
+    <originFiles name="sample_input.txt" path="C:\Users\ghada\Documents\SNN\data\sample_input.txt"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="C:\Users\ghada\Documents\SNN\hls\testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

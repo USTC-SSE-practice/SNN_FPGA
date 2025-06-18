@@ -1,0 +1,8 @@
+<pragmas>
+<pragma file="neuron_core.cpp" line="16" pragmaType="unroll" parentfunction="snn_infer" factor="-1" skip_exit_check="0"/>
+<pragma file="neuron_core.cpp" line="21" pragmaType="pipeline" parentfunction="snn_infer" off="0" ii="1" rewind="0" style=""/>
+<pragma file="neuron_core.cpp" line="8" pragmaType="interface" parentfunction="snn_infer" mode="ap_memory" port="input" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="neuron_core.cpp" line="9" pragmaType="interface" parentfunction="snn_infer" mode="ap_memory" port="output" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="neuron_core.cpp" line="10" pragmaType="interface" parentfunction="snn_infer" mode="ap_ctrl_hs" port="return" name=""/>
+<pragma file="neuron_core.cpp" line="12" pragmaType="array_partition" parentfunction="snn_infer" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZL13model_weights"/>
+</pragmas>

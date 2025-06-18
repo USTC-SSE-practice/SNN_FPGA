@@ -1,0 +1,231 @@
+
+
+================================================================
+== Vitis HLS Report for 'snn_infer'
+================================================================
+* Date:           Tue Jun 17 23:48:46 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        SNN_project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.016 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    23611|    23611|  0.236 ms|  0.236 ms|  23612|  23612|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------+-------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                |                                     |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                    Instance                    |                Module               |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +------------------------------------------------+-------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_snn_infer_Pipeline_VITIS_LOOP_20_2_fu_229   |snn_infer_Pipeline_VITIS_LOOP_20_2   |     2359|     2359|  23.590 us|  23.590 us|  2359|  2359|       no|
+        |grp_snn_infer_Pipeline_VITIS_LOOP_20_21_fu_238  |snn_infer_Pipeline_VITIS_LOOP_20_21  |     2359|     2359|  23.590 us|  23.590 us|  2359|  2359|       no|
+        |grp_snn_infer_Pipeline_VITIS_LOOP_20_22_fu_247  |snn_infer_Pipeline_VITIS_LOOP_20_22  |     2359|     2359|  23.590 us|  23.590 us|  2359|  2359|       no|
+        |grp_snn_infer_Pipeline_VITIS_LOOP_20_23_fu_256  |snn_infer_Pipeline_VITIS_LOOP_20_23  |     2359|     2359|  23.590 us|  23.590 us|  2359|  2359|       no|
+        |grp_snn_infer_Pipeline_VITIS_LOOP_20_24_fu_265  |snn_infer_Pipeline_VITIS_LOOP_20_24  |     2359|     2359|  23.590 us|  23.590 us|  2359|  2359|       no|
+        |grp_snn_infer_Pipeline_VITIS_LOOP_20_25_fu_274  |snn_infer_Pipeline_VITIS_LOOP_20_25  |     2359|     2359|  23.590 us|  23.590 us|  2359|  2359|       no|
+        |grp_snn_infer_Pipeline_VITIS_LOOP_20_26_fu_283  |snn_infer_Pipeline_VITIS_LOOP_20_26  |     2359|     2359|  23.590 us|  23.590 us|  2359|  2359|       no|
+        |grp_snn_infer_Pipeline_VITIS_LOOP_20_27_fu_292  |snn_infer_Pipeline_VITIS_LOOP_20_27  |     2359|     2359|  23.590 us|  23.590 us|  2359|  2359|       no|
+        |grp_snn_infer_Pipeline_VITIS_LOOP_20_28_fu_301  |snn_infer_Pipeline_VITIS_LOOP_20_28  |     2359|     2359|  23.590 us|  23.590 us|  2359|  2359|       no|
+        |grp_snn_infer_Pipeline_VITIS_LOOP_20_29_fu_310  |snn_infer_Pipeline_VITIS_LOOP_20_29  |     2359|     2359|  23.590 us|  23.590 us|  2359|  2359|       no|
+        +------------------------------------------------+-------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     630|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |       20|     3|    1776|    1699|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     765|    -|
+|Register         |        -|     -|      32|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       20|     3|    1808|    3094|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        3|    ~0|      ~0|       1|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
+    |                    Instance                    |                Module               | BRAM_18K| DSP|  FF | LUT | URAM|
+    +------------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
+    |fadd_32ns_32ns_32_4_no_dsp_1_U52                |fadd_32ns_32ns_32_4_no_dsp_1         |        0|   0|  168|  434|    0|
+    |fcmp_32ns_32ns_1_2_no_dsp_1_U51                 |fcmp_32ns_32ns_1_2_no_dsp_1          |        0|   0|    0|    0|    0|
+    |fmul_32ns_32ns_32_3_max_dsp_1_U53               |fmul_32ns_32ns_32_3_max_dsp_1        |        0|   3|  128|  135|    0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_2_fu_229   |snn_infer_Pipeline_VITIS_LOOP_20_2   |        2|   0|  148|  113|    0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_21_fu_238  |snn_infer_Pipeline_VITIS_LOOP_20_21  |        2|   0|  148|  113|    0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_22_fu_247  |snn_infer_Pipeline_VITIS_LOOP_20_22  |        2|   0|  148|  113|    0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_23_fu_256  |snn_infer_Pipeline_VITIS_LOOP_20_23  |        2|   0|  148|  113|    0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_24_fu_265  |snn_infer_Pipeline_VITIS_LOOP_20_24  |        2|   0|  148|  113|    0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_25_fu_274  |snn_infer_Pipeline_VITIS_LOOP_20_25  |        2|   0|  148|  113|    0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_26_fu_283  |snn_infer_Pipeline_VITIS_LOOP_20_26  |        2|   0|  148|  113|    0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_27_fu_292  |snn_infer_Pipeline_VITIS_LOOP_20_27  |        2|   0|  148|  113|    0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_28_fu_301  |snn_infer_Pipeline_VITIS_LOOP_20_28  |        2|   0|  148|  113|    0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_29_fu_310  |snn_infer_Pipeline_VITIS_LOOP_20_29  |        2|   0|  148|  113|    0|
+    +------------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
+    |Total                                           |                                     |       20|   3| 1776| 1699|    0|
+    +------------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |and_ln26_1_fu_417_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln26_2_fu_471_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln26_3_fu_525_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln26_4_fu_579_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln26_5_fu_633_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln26_6_fu_687_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln26_7_fu_741_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln26_8_fu_795_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln26_9_fu_849_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln26_fu_363_p2       |       and|   0|  0|   2|           1|           1|
+    |icmp_ln26_10_fu_615_p2   |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln26_11_fu_621_p2   |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln26_12_fu_669_p2   |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln26_13_fu_675_p2   |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln26_14_fu_723_p2   |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln26_15_fu_729_p2   |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln26_16_fu_777_p2   |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln26_17_fu_783_p2   |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln26_18_fu_831_p2   |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln26_19_fu_837_p2   |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln26_1_fu_351_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln26_2_fu_399_p2    |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln26_3_fu_405_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln26_4_fu_453_p2    |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln26_5_fu_459_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln26_6_fu_507_p2    |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln26_7_fu_513_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln26_8_fu_561_p2    |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln26_9_fu_567_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln26_fu_345_p2      |      icmp|   0|  0|  11|           8|           2|
+    |or_ln26_1_fu_411_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln26_2_fu_465_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln26_3_fu_519_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln26_4_fu_573_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln26_5_fu_627_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln26_6_fu_681_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln26_7_fu_735_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln26_8_fu_789_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln26_9_fu_843_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln26_fu_357_p2        |        or|   0|  0|   2|           1|           1|
+    |select_ln26_1_fu_423_p3  |    select|   0|  0|  32|           1|          32|
+    |select_ln26_2_fu_477_p3  |    select|   0|  0|  32|           1|          32|
+    |select_ln26_3_fu_531_p3  |    select|   0|  0|  32|           1|          32|
+    |select_ln26_4_fu_585_p3  |    select|   0|  0|  32|           1|          32|
+    |select_ln26_5_fu_639_p3  |    select|   0|  0|  32|           1|          32|
+    |select_ln26_6_fu_693_p3  |    select|   0|  0|  32|           1|          32|
+    |select_ln26_7_fu_747_p3  |    select|   0|  0|  32|           1|          32|
+    |select_ln26_8_fu_801_p3  |    select|   0|  0|  32|           1|          32|
+    |select_ln26_9_fu_855_p3  |    select|   0|  0|  32|           1|          32|
+    |select_ln26_fu_369_p3    |    select|   0|  0|  32|           1|          32|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0| 630|         340|         370|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+-----+-----------+-----+-----------+
+    |        Name       | LUT | Input Size| Bits| Total Bits|
+    +-------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm          |  116|         23|    1|         23|
+    |grp_fu_319_p0      |   59|         11|   32|        352|
+    |grp_fu_954_ce      |   59|         11|    1|         11|
+    |grp_fu_954_p0      |   59|         11|   32|        352|
+    |grp_fu_954_p1      |   59|         11|   32|        352|
+    |grp_fu_958_ce      |   59|         11|    1|         11|
+    |grp_fu_958_p0      |   59|         11|   32|        352|
+    |grp_fu_958_p1      |   59|         11|   32|        352|
+    |input_r_address0   |   59|         11|   10|        110|
+    |input_r_ce0        |   59|         11|    1|         11|
+    |output_r_address0  |   59|         11|    4|         44|
+    |output_r_d0        |   59|         11|   32|        352|
+    +-------------------+-----+-----------+-----+-----------+
+    |Total              |  765|        144|  210|       2322|
+    +-------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |                             Name                            | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                    |  22|   0|   22|          0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_21_fu_238_ap_start_reg  |   1|   0|    1|          0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_22_fu_247_ap_start_reg  |   1|   0|    1|          0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_23_fu_256_ap_start_reg  |   1|   0|    1|          0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_24_fu_265_ap_start_reg  |   1|   0|    1|          0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_25_fu_274_ap_start_reg  |   1|   0|    1|          0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_26_fu_283_ap_start_reg  |   1|   0|    1|          0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_27_fu_292_ap_start_reg  |   1|   0|    1|          0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_28_fu_301_ap_start_reg  |   1|   0|    1|          0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_29_fu_310_ap_start_reg  |   1|   0|    1|          0|
+    |grp_snn_infer_Pipeline_VITIS_LOOP_20_2_fu_229_ap_start_reg   |   1|   0|    1|          0|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                        |  32|   0|   32|          0|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|     snn_infer|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|     snn_infer|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|     snn_infer|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|     snn_infer|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|     snn_infer|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|     snn_infer|  return value|
+|input_r_address0   |  out|   10|   ap_memory|       input_r|         array|
+|input_r_ce0        |  out|    1|   ap_memory|       input_r|         array|
+|input_r_q0         |   in|   32|   ap_memory|       input_r|         array|
+|output_r_address0  |  out|    4|   ap_memory|      output_r|         array|
+|output_r_ce0       |  out|    1|   ap_memory|      output_r|         array|
+|output_r_we0       |  out|    1|   ap_memory|      output_r|         array|
+|output_r_d0        |  out|   32|   ap_memory|      output_r|         array|
++-------------------+-----+-----+------------+--------------+--------------+
+

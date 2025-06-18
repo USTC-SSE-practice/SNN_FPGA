@@ -1,0 +1,34 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: neuron_core.cpp, Line: 7, Column: 0 }
+Function:        _Z9snn_inferPKfPf
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_15_1
+  - String:          ''' ('
+  - LoopLoc:         'neuron_core.cpp:15:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          snn_infer
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./model_weights.h, Line: 4, Column: 0 }
+Function:        _Z9snn_inferPKfPf
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL13model_weights
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

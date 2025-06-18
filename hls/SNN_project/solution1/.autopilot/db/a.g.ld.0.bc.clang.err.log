@@ -1,0 +1,2 @@
+remark: neuron_core.cpp:7:0: Unrolling loop 'VITIS_LOOP_15_1' (neuron_core.cpp:15:19) in function 'snn_infer' completely with a factor of 10
+remark: ./model_weights.h:4:0: Applying array_partition to '_ZL13model_weights': Complete partitioning on dimension 1.

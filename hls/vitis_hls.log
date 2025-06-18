@@ -1,0 +1,346 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx3/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'ghada' on host '婉如' (Windows NT_amd64 version 6.2) on Tue Jun 17 23:48:09 +0800 2025
+INFO: [HLS 200-10] In directory 'C:/Users/ghada/Documents/SNN/hls'
+Sourcing Tcl script 'C:/Users/ghada/Documents/SNN/hls/SNN_project/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/ghada/Documents/SNN/hls/SNN_project/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project SNN_project 
+INFO: [HLS 200-10] Opening project 'C:/Users/ghada/Documents/SNN/hls/SNN_project'.
+INFO: [HLS 200-1510] Running: set_top snn_infer 
+INFO: [HLS 200-1510] Running: add_files model_weights.h 
+INFO: [HLS 200-10] Adding design file 'model_weights.h' to the project
+INFO: [HLS 200-1510] Running: add_files neuron_core.cpp 
+INFO: [HLS 200-10] Adding design file 'neuron_core.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files neuron_core.h 
+INFO: [HLS 200-10] Adding design file 'neuron_core.h' to the project
+INFO: [HLS 200-1510] Running: add_files ../data/sample_input.txt 
+INFO: [HLS 200-10] Adding design file '../data/sample_input.txt' to the project
+INFO: [HLS 200-1510] Running: add_files -tb testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file 'testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/ghada/Documents/SNN/hls/SNN_project/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 55011
+WARNING: [HLS 200-40] Skipped source file 'sample_input.txt'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.1 seconds; current allocated memory: 677.246 MB.
+INFO: [HLS 200-10] Analyzing design file 'neuron_core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.405 seconds; current allocated memory: 678.324 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_15_1' (neuron_core.cpp:15:19) in function 'snn_infer' completely with a factor of 10 (neuron_core.cpp:7:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL13model_weights': Complete partitioning on dimension 1. (./model_weights.h:4:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.901 seconds; current allocated memory: 679.172 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 679.172 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.165 seconds; current allocated memory: 686.891 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 688.109 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.153 seconds; current allocated memory: 709.777 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 790.586 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'snn_infer' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer_Pipeline_VITIS_LOOP_20_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_2'.
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_2' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_2' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.608 seconds; current allocated memory: 795.191 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.158 seconds; current allocated memory: 796.453 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer_Pipeline_VITIS_LOOP_20_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_2'.
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_21' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_2_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_2_load', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_21' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_2_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_2_load', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.249 seconds; current allocated memory: 796.926 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.161 seconds; current allocated memory: 796.934 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer_Pipeline_VITIS_LOOP_20_22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_2'.
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_22' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_4_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_4_load', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_22' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_4_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_4_load', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.253 seconds; current allocated memory: 797.430 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 797.445 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer_Pipeline_VITIS_LOOP_20_23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_2'.
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_23' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_6_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_6_load', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_23' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_6_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_6_load', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.281 seconds; current allocated memory: 797.895 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.165 seconds; current allocated memory: 797.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer_Pipeline_VITIS_LOOP_20_24' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_2'.
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_24' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_6', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_24' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_6', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.303 seconds; current allocated memory: 798.270 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.161 seconds; current allocated memory: 798.270 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer_Pipeline_VITIS_LOOP_20_25' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_2'.
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_25' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_5', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_25' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_5', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 798.352 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.161 seconds; current allocated memory: 798.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer_Pipeline_VITIS_LOOP_20_26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_2'.
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_26' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_4', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_26' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_4', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 799.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 799.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer_Pipeline_VITIS_LOOP_20_27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_2'.
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_27' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_3', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_27' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_3', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.306 seconds; current allocated memory: 799.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.182 seconds; current allocated memory: 799.527 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer_Pipeline_VITIS_LOOP_20_28' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_2'.
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_28' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_2', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_28' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_2', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.301 seconds; current allocated memory: 799.934 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 800.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer_Pipeline_VITIS_LOOP_20_29' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_2'.
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_29' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_1', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'snn_infer_Pipeline_VITIS_LOOP_20_29' (loop 'VITIS_LOOP_20_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln20', neuron_core.cpp:20) of variable 'sum', neuron_core.cpp:22 on local variable 'sum' and 'load' operation ('sum_load_1', neuron_core.cpp:22) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 3, Depth = 9, loop 'VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.287 seconds; current allocated memory: 800.207 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.164 seconds; current allocated memory: 800.211 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'snn_infer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.339 seconds; current allocated memory: 801.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.415 seconds; current allocated memory: 801.586 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer_Pipeline_VITIS_LOOP_20_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'snn_infer_Pipeline_VITIS_LOOP_20_2' pipeline 'VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer_Pipeline_VITIS_LOOP_20_2'.
+INFO: [RTMG 210-279] Implementing memory 'snn_infer_snn_infer_Pipeline_VITIS_LOOP_20_2_p_ZL13model_weights_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.672 seconds; current allocated memory: 804.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer_Pipeline_VITIS_LOOP_20_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'snn_infer_Pipeline_VITIS_LOOP_20_21' pipeline 'VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer_Pipeline_VITIS_LOOP_20_21'.
+INFO: [RTMG 210-279] Implementing memory 'snn_infer_snn_infer_Pipeline_VITIS_LOOP_20_21_p_ZL13model_weights_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.353 seconds; current allocated memory: 805.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer_Pipeline_VITIS_LOOP_20_22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'snn_infer_Pipeline_VITIS_LOOP_20_22' pipeline 'VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer_Pipeline_VITIS_LOOP_20_22'.
+INFO: [RTMG 210-279] Implementing memory 'snn_infer_snn_infer_Pipeline_VITIS_LOOP_20_22_p_ZL13model_weights_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.35 seconds; current allocated memory: 806.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer_Pipeline_VITIS_LOOP_20_23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'snn_infer_Pipeline_VITIS_LOOP_20_23' pipeline 'VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer_Pipeline_VITIS_LOOP_20_23'.
+INFO: [RTMG 210-279] Implementing memory 'snn_infer_snn_infer_Pipeline_VITIS_LOOP_20_23_p_ZL13model_weights_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.401 seconds; current allocated memory: 807.684 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer_Pipeline_VITIS_LOOP_20_24' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'snn_infer_Pipeline_VITIS_LOOP_20_24' pipeline 'VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer_Pipeline_VITIS_LOOP_20_24'.
+INFO: [RTMG 210-279] Implementing memory 'snn_infer_snn_infer_Pipeline_VITIS_LOOP_20_24_p_ZL13model_weights_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.349 seconds; current allocated memory: 808.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer_Pipeline_VITIS_LOOP_20_25' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'snn_infer_Pipeline_VITIS_LOOP_20_25' pipeline 'VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer_Pipeline_VITIS_LOOP_20_25'.
+INFO: [RTMG 210-279] Implementing memory 'snn_infer_snn_infer_Pipeline_VITIS_LOOP_20_25_p_ZL13model_weights_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.352 seconds; current allocated memory: 809.965 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer_Pipeline_VITIS_LOOP_20_26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'snn_infer_Pipeline_VITIS_LOOP_20_26' pipeline 'VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer_Pipeline_VITIS_LOOP_20_26'.
+INFO: [RTMG 210-279] Implementing memory 'snn_infer_snn_infer_Pipeline_VITIS_LOOP_20_26_p_ZL13model_weights_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.332 seconds; current allocated memory: 811.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer_Pipeline_VITIS_LOOP_20_27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'snn_infer_Pipeline_VITIS_LOOP_20_27' pipeline 'VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer_Pipeline_VITIS_LOOP_20_27'.
+INFO: [RTMG 210-279] Implementing memory 'snn_infer_snn_infer_Pipeline_VITIS_LOOP_20_27_p_ZL13model_weights_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.362 seconds; current allocated memory: 812.367 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer_Pipeline_VITIS_LOOP_20_28' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'snn_infer_Pipeline_VITIS_LOOP_20_28' pipeline 'VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer_Pipeline_VITIS_LOOP_20_28'.
+INFO: [RTMG 210-279] Implementing memory 'snn_infer_snn_infer_Pipeline_VITIS_LOOP_20_28_p_ZL13model_weights_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.389 seconds; current allocated memory: 813.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer_Pipeline_VITIS_LOOP_20_29' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'snn_infer_Pipeline_VITIS_LOOP_20_29' pipeline 'VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer_Pipeline_VITIS_LOOP_20_29'.
+INFO: [RTMG 210-279] Implementing memory 'snn_infer_snn_infer_Pipeline_VITIS_LOOP_20_29_p_ZL13model_weights_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 814.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'snn_infer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'snn_infer/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'snn_infer/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'snn_infer' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'snn_infer'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.559 seconds; current allocated memory: 817.266 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.949 seconds; current allocated memory: 823.922 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.997 seconds; current allocated memory: 827.625 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for snn_infer.
+INFO: [VLOG 209-307] Generating Verilog RTL for snn_infer.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 142.53 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 8 seconds. CPU system time: 1 seconds. Elapsed time: 26.757 seconds; current allocated memory: 151.008 MB.
+INFO: [HLS 200-112] Total CPU user time: 12 seconds. Total CPU system time: 3 seconds. Total elapsed time: 42.75 seconds; peak allocated memory: 828.262 MB.

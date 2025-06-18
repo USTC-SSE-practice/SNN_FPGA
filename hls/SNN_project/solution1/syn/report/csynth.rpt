@@ -1,0 +1,169 @@
+
+
+================================================================
+== Synthesis Summary Report of 'snn_infer'
+================================================================
++ General Information: 
+    * Date:           Tue Jun 17 23:48:47 2025
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        SNN_project
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-----------+-----+
+    |                 Modules                | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |         |            |           |     |
+    |                 & Loops                | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF     |    LUT    | URAM|
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-----------+-----+
+    |+ snn_infer                             |     -|  0.28|    23611|  2.361e+05|         -|    23612|     -|        no|  20 (3%)|  3 (~0%)|  1808 (~0%)|  3094 (1%)|    -|
+    | + snn_infer_Pipeline_VITIS_LOOP_20_2   |     -|  0.28|     2359|  2.359e+04|         -|     2359|     -|        no|  2 (~0%)|        -|   148 (~0%)|  113 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                     |    II|  7.30|     2357|  2.357e+04|         9|        3|   784|       yes|        -|        -|           -|          -|    -|
+    | + snn_infer_Pipeline_VITIS_LOOP_20_21  |     -|  0.28|     2359|  2.359e+04|         -|     2359|     -|        no|  2 (~0%)|        -|   148 (~0%)|  113 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                     |    II|  7.30|     2357|  2.357e+04|         9|        3|   784|       yes|        -|        -|           -|          -|    -|
+    | + snn_infer_Pipeline_VITIS_LOOP_20_22  |     -|  0.28|     2359|  2.359e+04|         -|     2359|     -|        no|  2 (~0%)|        -|   148 (~0%)|  113 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                     |    II|  7.30|     2357|  2.357e+04|         9|        3|   784|       yes|        -|        -|           -|          -|    -|
+    | + snn_infer_Pipeline_VITIS_LOOP_20_23  |     -|  0.28|     2359|  2.359e+04|         -|     2359|     -|        no|  2 (~0%)|        -|   148 (~0%)|  113 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                     |    II|  7.30|     2357|  2.357e+04|         9|        3|   784|       yes|        -|        -|           -|          -|    -|
+    | + snn_infer_Pipeline_VITIS_LOOP_20_24  |     -|  0.28|     2359|  2.359e+04|         -|     2359|     -|        no|  2 (~0%)|        -|   148 (~0%)|  113 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                     |    II|  7.30|     2357|  2.357e+04|         9|        3|   784|       yes|        -|        -|           -|          -|    -|
+    | + snn_infer_Pipeline_VITIS_LOOP_20_25  |     -|  0.28|     2359|  2.359e+04|         -|     2359|     -|        no|  2 (~0%)|        -|   148 (~0%)|  113 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                     |    II|  7.30|     2357|  2.357e+04|         9|        3|   784|       yes|        -|        -|           -|          -|    -|
+    | + snn_infer_Pipeline_VITIS_LOOP_20_26  |     -|  0.28|     2359|  2.359e+04|         -|     2359|     -|        no|  2 (~0%)|        -|   148 (~0%)|  113 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                     |    II|  7.30|     2357|  2.357e+04|         9|        3|   784|       yes|        -|        -|           -|          -|    -|
+    | + snn_infer_Pipeline_VITIS_LOOP_20_27  |     -|  0.28|     2359|  2.359e+04|         -|     2359|     -|        no|  2 (~0%)|        -|   148 (~0%)|  113 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                     |    II|  7.30|     2357|  2.357e+04|         9|        3|   784|       yes|        -|        -|           -|          -|    -|
+    | + snn_infer_Pipeline_VITIS_LOOP_20_28  |     -|  0.28|     2359|  2.359e+04|         -|     2359|     -|        no|  2 (~0%)|        -|   148 (~0%)|  113 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                     |    II|  7.30|     2357|  2.357e+04|         9|        3|   784|       yes|        -|        -|           -|          -|    -|
+    | + snn_infer_Pipeline_VITIS_LOOP_20_29  |     -|  0.28|     2359|  2.359e+04|         -|     2359|     -|        no|  2 (~0%)|        -|   148 (~0%)|  113 (~0%)|    -|
+    |  o VITIS_LOOP_20_2                     |    II|  7.30|     2357|  2.357e+04|         9|        3|   784|       yes|        -|        -|           -|          -|    -|
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++-------------------+----------+
+| Interface         | Bitwidth |
++-------------------+----------+
+| input_r_address0  | 10       |
+| input_r_q0        | 32       |
+| output_r_address0 | 4        |
+| output_r_d0       | 32       |
++-------------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------+
+| Argument | Direction | Datatype      |
++----------+-----------+---------------+
+| input    | in        | float const * |
+| output   | out       | float*        |
++----------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------+-------------------+---------+----------+
+| Argument | HW Interface      | HW Type | HW Usage |
++----------+-------------------+---------+----------+
+| input    | input_r_address0  | port    | offset   |
+| input    | input_r_ce0       | port    |          |
+| input    | input_r_q0        | port    |          |
+| output   | output_r_address0 | port    | offset   |
+| output   | output_r_ce0      | port    |          |
+| output   | output_r_we0      | port    |          |
+| output   | output_r_d0       | port    |          |
++----------+-------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------+-----+--------+----------+-----+--------+---------+
+| Name                                   | DSP | Pragma | Variable | Op  | Impl   | Latency |
++----------------------------------------+-----+--------+----------+-----+--------+---------+
+| + snn_infer                            | 3   |        |          |     |        |         |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_2  | 0   |        |          |     |        |         |
+|    add_ln20_fu_108_p2                  | -   |        | add_ln20 | add | fabric | 0       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_21 | 0   |        |          |     |        |         |
+|    add_ln20_fu_108_p2                  | -   |        | add_ln20 | add | fabric | 0       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_22 | 0   |        |          |     |        |         |
+|    add_ln20_fu_108_p2                  | -   |        | add_ln20 | add | fabric | 0       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_23 | 0   |        |          |     |        |         |
+|    add_ln20_fu_108_p2                  | -   |        | add_ln20 | add | fabric | 0       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_24 | 0   |        |          |     |        |         |
+|    add_ln20_fu_108_p2                  | -   |        | add_ln20 | add | fabric | 0       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_25 | 0   |        |          |     |        |         |
+|    add_ln20_fu_108_p2                  | -   |        | add_ln20 | add | fabric | 0       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_26 | 0   |        |          |     |        |         |
+|    add_ln20_fu_108_p2                  | -   |        | add_ln20 | add | fabric | 0       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_27 | 0   |        |          |     |        |         |
+|    add_ln20_fu_108_p2                  | -   |        | add_ln20 | add | fabric | 0       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_28 | 0   |        |          |     |        |         |
+|    add_ln20_fu_108_p2                  | -   |        | add_ln20 | add | fabric | 0       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_29 | 0   |        |          |     |        |         |
+|    add_ln20_fu_108_p2                  | -   |        | add_ln20 | add | fabric | 0       |
++----------------------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++----------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+| Name                                   | BRAM | URAM | Pragma | Variable              | Storage | Impl | Latency |
++----------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+| + snn_infer                            | 20   | 0    |        |                       |         |      |         |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_2  | 2    | 0    |        |                       |         |      |         |
+|    p_ZL13model_weights_0_U             | 2    | -    |        | p_ZL13model_weights_0 | rom_1p  | auto | 1       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_21 | 2    | 0    |        |                       |         |      |         |
+|    p_ZL13model_weights_1_U             | 2    | -    |        | p_ZL13model_weights_1 | rom_1p  | auto | 1       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_22 | 2    | 0    |        |                       |         |      |         |
+|    p_ZL13model_weights_2_U             | 2    | -    |        | p_ZL13model_weights_2 | rom_1p  | auto | 1       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_23 | 2    | 0    |        |                       |         |      |         |
+|    p_ZL13model_weights_3_U             | 2    | -    |        | p_ZL13model_weights_3 | rom_1p  | auto | 1       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_24 | 2    | 0    |        |                       |         |      |         |
+|    p_ZL13model_weights_4_U             | 2    | -    |        | p_ZL13model_weights_4 | rom_1p  | auto | 1       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_25 | 2    | 0    |        |                       |         |      |         |
+|    p_ZL13model_weights_5_U             | 2    | -    |        | p_ZL13model_weights_5 | rom_1p  | auto | 1       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_26 | 2    | 0    |        |                       |         |      |         |
+|    p_ZL13model_weights_6_U             | 2    | -    |        | p_ZL13model_weights_6 | rom_1p  | auto | 1       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_27 | 2    | 0    |        |                       |         |      |         |
+|    p_ZL13model_weights_7_U             | 2    | -    |        | p_ZL13model_weights_7 | rom_1p  | auto | 1       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_28 | 2    | 0    |        |                       |         |      |         |
+|    p_ZL13model_weights_8_U             | 2    | -    |        | p_ZL13model_weights_8 | rom_1p  | auto | 1       |
+|  + snn_infer_Pipeline_VITIS_LOOP_20_29 | 2    | 0    |        |                       |         |      |         |
+|    p_ZL13model_weights_9_U             | 2    | -    |        | p_ZL13model_weights_9 | rom_1p  | auto | 1       |
++----------------------------------------+------+------+--------+-----------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------------+------------------------------------------------+
+| Type            | Options                               | Location                                       |
++-----------------+---------------------------------------+------------------------------------------------+
+| interface       | mode=ap_memory port=input             | neuron_core.cpp:8 in snn_infer, input          |
+| interface       | mode=ap_memory port=output            | neuron_core.cpp:9 in snn_infer, output         |
+| interface       | mode=ap_ctrl_hs port=return           | neuron_core.cpp:10 in snn_infer, return        |
+| array_partition | variable=model_weights complete dim=1 | neuron_core.cpp:12 in snn_infer, model_weights |
+| unroll          |                                       | neuron_core.cpp:16 in snn_infer                |
+| pipeline        | II=1                                  | neuron_core.cpp:21 in snn_infer                |
++-----------------+---------------------------------------+------------------------------------------------+
+
+

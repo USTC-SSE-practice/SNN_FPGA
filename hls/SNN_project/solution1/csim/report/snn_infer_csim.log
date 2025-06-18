@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../testbench.cpp in debug mode
+   Generating csim.exe
+Output neuron values:
+Neuron 0: 0
+Neuron 1: 0
+Neuron 2: 0
+Neuron 3: 0
+Neuron 4: 0
+Neuron 5: 0
+Neuron 6: 0
+Neuron 7: 12.2818
+Neuron 8: 0
+Neuron 9: 0
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
