@@ -13,7 +13,7 @@ This is an FPGA imlementation of Spiking Neural Network Algorithm that supports 
 
 #### Prerequisites
 
-- Python version 2.9.0 >
+- Python version 3.9.0 >
 
   ```sh
   https://www.python.org/
