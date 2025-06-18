@@ -3,3 +3,16 @@
 s_t_array.npy
 
 v_t_array.npy
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+
+# local
+dump.rdb
+
+# environments
+.env
+
+# Ignore system-specific files (e.g., macOS, Windows)
+.DS_Store
