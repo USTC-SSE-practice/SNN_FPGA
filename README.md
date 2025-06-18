@@ -30,7 +30,7 @@ This is an FPGA imlementation of Spiking Neural Network Algorithm that supports 
 1. Clone the repository
 
    ```sh
-   git clone https://github.com/Albert-Osei/SNN-implementation.git
+   git clone https://github.com/USTC-SSE-practice/SNN_FPGA.git
    ```
 
 2. Create Virtual Environment
