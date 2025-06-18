@@ -36,7 +36,7 @@ This is an FPGA imlementation of Spiking Neural Network Algorithm that supports 
 2. Create Virtual Environment
 
    ```sh
-   virtualenv .spike-venv
+   virtualenv venv
    ```
 
    OR
