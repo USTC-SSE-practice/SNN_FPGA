@@ -68,7 +68,7 @@ This is an FPGA imlementation of Spiking Neural Network Algorithm that supports 
 * run src/inference.py
 * this command will use pregenerated weights and output the results of classifying the test images
 
-### Weight Reconstruction (Training)
+#### Weight Reconstruction (Training)
 
 * to reconstruct the weights, run src/train.py
 * this command will generate new or update the model_weights.pth file to be used for prediction in the inference.py
