@@ -72,3 +72,6 @@ This is an FPGA imlementation of Spiking Neural Network Algorithm that supports 
 
 * to reconstruct the weights, run src/train.py
 * this command will generate new or update the model_weights.pth file to be used for prediction in the inference.py
+
+#### Notes
+* in /hls folder only snn_tp.cpp and host2.cpp are required to upload to Vitis IDE  
